@@ -1,10 +1,10 @@
-# textscan
+# txtscan
 
 A small command-line program that reports on general statistics and interesting characters inside a text file.
 
 ## Examples
 
-	% textscan 1.eml /etc/moduli
+	% txtscan 1.eml /etc/moduli
 	1.eml
 	  Bytes: 97,910
 	  Lines: 2,343
@@ -21,7 +21,7 @@ A small command-line program that reports on general statistics and interesting 
 
 Standard input scanning works too:
 
-	% date | textscan -
+	% date | txtscan -
 	<stdin>
 	  Bytes: 29
 	  Lines: 1
@@ -31,7 +31,7 @@ Standard input scanning works too:
 
 Verbose mode reports all the positions of the "interesting characters":
 
-	% echo -e '\nwhat?\tin blazes\nis happening\r\nin\bthis\ttext' | textscan -v -
+	% echo -e '\nwhat?\tin blazes\nis happening\r\nin\bthis\ttext' | txtscan -v -
 	<stdin>
 	  L1 C5: '\t' (chr 9)
 	  L3 C2: '\x08' (chr 8)
@@ -47,7 +47,7 @@ Verbose mode reports all the positions of the "interesting characters":
 
 ## What's "Interesting"?
 
-Textscan only reports on **things that *aren't* in this list**:
+txtscan only reports on **things that *aren't* in this list**:
 
 - A-Z, a-z, 0-9
 - space, newline (\n), carriage return (\r)
@@ -64,7 +64,7 @@ Textscan only reports on **things that *aren't* in this list**:
 
 ## Help Message
 
-	usage: textscan [-h] [-v] input [input ...]
+	usage: txtscan [-h] [-v] input [input ...]
 	
 	Print information about the characters in the input text
 	
@@ -74,6 +74,10 @@ Textscan only reports on **things that *aren't* in this list**:
 	optional arguments:
 	  -h, --help     show this help message and exit
 	  -v, --verbose  Verbosely report on each interesting character on each line
+
+## License
+
+The license is BSD-like. See LICENSE.txt for details.
 
 ## To Do
 
