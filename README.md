@@ -1,6 +1,6 @@
 # txtscan
 
-A small command-line program that reports on general statistics and interesting characters inside a text file.
+A small command-line program that reports on general statistics and interesting characters inside text file(s).
 
 ## Examples
 
